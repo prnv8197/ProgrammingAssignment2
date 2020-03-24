@@ -1,7 +1,7 @@
-## Put comments here that give an overall description of what your
-## functions do
+#makeCacheMatrix() function creates an object of type makeCacheMatrix which is then passed as an argument
+#to the cacheSolve.
 
-## Write a short comment describing this function
+## x is the matrix that we want to invert, i is the inverted matrix.
 
 makeCacheMatrix <- function(x = matrix()) {
         inv<-NULL
@@ -20,13 +20,12 @@ makeCacheMatrix <- function(x = matrix()) {
 }
 
 
-## Write a short comment describing this function
+
 
 cacheSolve <- function(x, ...) {
         ## Return a matrix that is the inverse of 'x'
         i <- x$getinvert()
         if(!is.null(i)) {
-                message("getting cached data")
                 return(i)
         }
         data <- x$get()
