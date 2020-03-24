@@ -1,8 +1,9 @@
 #makeCacheMatrix() function creates an object of type makeCacheMatrix which is then passed as an argument
 #to the cacheSolve() function.
 
-## x is the matrix that we want to invert, i is the inverted matrix.
-
+ 
+# x is the matrix that we want to invert
+#i is the inverted matrix.
 makeCacheMatrix <- function(x = matrix()) {
         inv<-NULL
         set<-function(y){
@@ -29,6 +30,7 @@ cacheSolve <- function(x, ...) {
                 return(i)
         }
         data <- x$get()
+        ##using the function to inverse the matrix
         i <- solve(data, ...)
         x$setinvert(i)
         i
