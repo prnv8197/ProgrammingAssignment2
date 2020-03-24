@@ -1,5 +1,5 @@
 #makeCacheMatrix() function creates an object of type makeCacheMatrix which is then passed as an argument
-#to the cacheSolve.
+#to the cacheSolve() function.
 
 ## x is the matrix that we want to invert, i is the inverted matrix.
 
