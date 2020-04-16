@@ -1,0 +1,8 @@
+library("dplyr")
+file<-download.file("https://d396qusza40orc.cloudfront.net/getdata%2Fdata%2Fss06hid.csv", destfile="idaho.csv")
+idahocsv<-read.csv("idaho.csv")
+red<-select(idahocsv, (SERIALNO:AGS))
+redvec<-mutate(red, temp=factor(ACR==3 & AGS==6))
+redtr<-transform(redvec, x=ACR==3 & AGS==6)
+which(redtr$x)
+head(redtr,120)
